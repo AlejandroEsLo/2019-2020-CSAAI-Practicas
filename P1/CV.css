@@ -1,20 +1,15 @@
-
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 body{
   background: url(images/fondo1.jpg) no-repeat center fixed;
   background-size: cover;
 }
-
-.nombre {
-  background-color: #000099;
-  color: white;
-  border: 5px solid black;
-  border-collapse: collapse;
-}
-
-.formacion {
-  background-color: #FFFF33;
-  color: black;
-  border: 5px solid black;
-  border-collapse: collapse;
+h1,p{
   text-align: center;
+}
+.trayectoria{
+  text-align: center;
+  padding: 5px;
 }
