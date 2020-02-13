@@ -1,0 +1,13 @@
+body{
+  padding: 20px;/*Relleno entre el cuerpo y el contenido*/
+  border: solid;
+  border-color: red;
+  margin: 10px;/*Margen alrededor del borde.*/
+}
+
+p{
+  padding: 10px;/*Relleno desde el párrafo a su borde.*/
+  border: solid;
+  border-color: blue;
+  margin: 5px;/*Margen alrededor de los parrafos*/
+}
