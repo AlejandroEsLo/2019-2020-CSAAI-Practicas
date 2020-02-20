@@ -1,6 +1,4 @@
 # Práctica 1: CV
-
-
-Probandooo.....
-
-Prueba funcionamiento de ATOM
+Funcionamiento:
+1)Pagina principal index.html (Funciona correctamente en cualquier navegador)
+2)Hoja de estilos(CV.css)
