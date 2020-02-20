@@ -1,0 +1,35 @@
+
+body{
+  padding: 5px;/*Relleno entre el cuerpo y el contenido*/
+  margin: auto;/*Margen alrededor del borde.*/
+
+}
+
+#resultado{
+  padding: 5px;/*Relleno desde el párrafo a su borde.*/
+  background-color: yellow;
+  border: solid;
+  border-color: black;
+  text-align: right;
+  font-weight: 1000;
+  font-size: 30px;
+}
+
+.boton{
+  padding: 20px;
+  font-weight: 1000;
+  font-size: 30px;
+  color: #ffffff;
+  background-color: #1883ba;
+  border-radius: 10px;
+  border: 2px solid #0016b0;
+  width: 24.5%;
+}
+
+#calculadora{
+  background-color: black;
+  padding: 20px;/*Relleno entre el cuerpo y el contenido*/
+  margin: 80px;/*Margen alrededor del borde.*/
+  border: solid;
+
+}
