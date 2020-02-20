@@ -6,7 +6,6 @@ const boton2 = document.getElementById('boton2');
 const n1 = 1;
 const n2 = 2;
 
-
 test.onclick = () =>{
   console.log("Clickk!!!");
   //Si no tiene color al pinchar lo ponemos al amarillo y si pinchamos otra vez lo quitamos
@@ -18,7 +17,12 @@ test.onclick = () =>{
 }
 
 boton1.onclick =() =>{
-  console.log("BOTON PULSADO");
-  test.innerHTML = "CAMBIADO POR EL BOTTON" + "<br>" + n1.valueOf();
+  console.log("BOTON1 PULSADO");
+  test.innerHTML += n1;
+}
+
+boton2.onclick =() =>{
+  console.log("BOTON2 PULSADO");
+  test.innerHTML += n2;
 
 }
