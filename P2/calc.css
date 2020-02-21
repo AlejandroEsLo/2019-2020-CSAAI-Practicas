@@ -2,12 +2,20 @@
 body{
   padding: 5px;/*Relleno entre el cuerpo y el contenido*/
   margin: auto;/*Margen alrededor del borde.*/
+  background-color: #f5b041;
 
+}
+
+#calculadora{
+  background-color: black;
+  padding: 20px;/*Relleno entre el cuerpo y el contenido*/
+  margin: 80px;/*Margen alrededor del borde.*/
+  border: solid;
 }
 
 #resultado{
   padding: 5px;/*Relleno desde el párrafo a su borde.*/
-  background-color: yellow;
+  background-color: yellow;/*pastel-amarillo= #F7DC6F;*/
   border: solid;
   border-color: black;
   text-align: right;
@@ -20,16 +28,19 @@ body{
   font-weight: 1000;
   font-size: 30px;
   color: #ffffff;
-  background-color: #1883ba;
+  background-color:#1ABC9C ;
   border-radius: 10px;
   border: 2px solid #0016b0;
   width: 24.5%;
+  cursor: pointer;  /* cursor mano */
+  transition-duration: 0.4s;
 }
 
-#calculadora{
-  background-color: black;
-  padding: 20px;/*Relleno entre el cuerpo y el contenido*/
-  margin: 80px;/*Margen alrededor del borde.*/
-  border: solid;
+.boton:hover {  /*Cambio color botones*/
+  background-color: #1883ba;
+}
 
+.boton:active { /Mover al click*/
+  box-shadow: 0 5px #666;
+  transform: translateY(6px);
 }
