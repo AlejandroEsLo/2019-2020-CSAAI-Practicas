@@ -1,8 +1,8 @@
 console.log("Ejecutando JS...");
 
 const resultado = document.getElementById('resultado');
-var resultado_final = 0;
-var n1 = "";
+let resultado_final = 0;
+let n1 = "";//let => variable local
 
 const b1 = document.getElementById('b1');
 const b2 = document.getElementById('b2');
