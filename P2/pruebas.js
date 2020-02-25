@@ -1,13 +1,12 @@
-console.log("Ejecutando JS...");
 
-const display = document.getElementById('display');
-let resultado_final = 0;
-let n1 = "";//let => variable local
 
-const b1 = document.getElementById('b1');
-const b2 = document.getElementById('b2');
 const boton_suma = document.getElementById('boton_suma');
 const boton_igual = document.getElementById('boton_igual');
+const b1 = document.getElementById('b1');
+const b2 = document.getElementById('b2');
+let n1 = "";//let => variable local
+
+
 
 b1.onclick =() =>{
   console.log("BOTON1 PULSADO");

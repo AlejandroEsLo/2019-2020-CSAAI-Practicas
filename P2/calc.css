@@ -13,7 +13,7 @@ body{
   border: solid;
 }
 
-#resultado{
+#display{
   padding: 5px;/*Relleno desde el párrafo a su borde.*/
   background-color: yellow;/*pastel-amarillo= #F7DC6F;*/
   border: solid;
