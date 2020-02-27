@@ -50,7 +50,7 @@ boton_suma.onclick =() =>{
 
 boton_igual.onclick =() =>{
   console.log("IGUAL PULSADO");
-  display.innerHTML = resultado_final + n1;
+  display.innerHTML = eval(display.innerHTML);
   //PRUEBAS
   console.log("resultado final: " + resultado_final);
   console.log("resultado: " + display.innerHTML);
