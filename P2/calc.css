@@ -23,7 +23,7 @@ body{
   font-size: 30px;
 }
 
-.boton{
+button{
   padding: 20px;
   font-weight: 1000;
   font-size: 30px;
@@ -36,11 +36,11 @@ body{
   transition-duration: 0.4s;
 }
 
-.boton:hover {  /*Cambio color botones*/
+button:hover {  /*Cambio color botones*/
   background-color: #1883ba;
 }
 
-.boton:active { /Mover al click*/
+button:active { /Mover al click*/
   box-shadow: 0 5px #666;
   transform: translateY(6px);
 }

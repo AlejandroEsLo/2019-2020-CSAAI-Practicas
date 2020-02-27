@@ -1,58 +1,86 @@
 console.log("Ejecutando JS...");
 
 const display = document.getElementById('display');
-let resultado_final = 0;
-let n1 = "";//let => variable local
-
-const b1 = document.getElementById('b1');
-const b2 = document.getElementById('b2');
 const boton_suma = document.getElementById('boton_suma');
 const boton_igual = document.getElementById('boton_igual');
+const clear = document.getElementById("clear")
 
-b1.onclick =() =>{
-  console.log("BOTON1 PULSADO");
-  if (display.innerHTML == 0){
-      display.innerHTML = b1.value;
-  }else {
-    display.innerHTML += b1.value;
+let numero = document.getElementsByClassName('numero')
+
+//// Agrupamos los botones que se refieren a los digitos(0-9)
+for (i = 0; i < numero.length; i++) {
+  numero[i].onclick = (ev)=>{
+    digito(ev.target);
   }
-  resultado_final = display.innerHTML;
-  //PRUEBAS
-  console.log("resultado final: " + resultado_final);
-  console.log("resultado: " + display.innerHTML);
 }
 
-b2.onclick =() =>{
-  console.log("BOTON2 PULSADO");
+/////// funcion comun para todos//////
+function digito(boton){
   if (display.innerHTML == 0){
-      display.innerHTML = b2.value;
+      display.innerHTML = boton.value;
   }else {
-    display.innerHTML += b2.value;
+    display.innerHTML += boton.value;
   }
-  resultado_final = display.innerHTML;
+}
+/////////////////////////////////////
+
+
+
+//// Agrupamos las operaciones que se refieren a (+-*/)
+for (i = 0; i < operador.length; i++) {
+  operador[i].onclick = (ev)=>{
+    operando(ev.target);
+  }
+}
+
+/////// funcion comun para todos//////????????????
+/*function operando(boton){
+  if (display.innerHTML == "+"){
+    display.innerHTML += suma.value;
+  }else if (display.innerHTML == "-") {
+    display.innerHTML += resta.value;
+  }else if (display.innerHTML == "/") {
+    display.innerHTML += divi.value;
+  }else if (display.innerHTML == "*") {
+    display.innerHTML += mult.value;
+  }
+}
+
+*/
+//-- Insertar suma
+suma.onclick = () => {
+  display.innerHTML += suma.value;
   //PRUEBAS
-  console.log("resultado final: " + resultado_final);
   console.log("resultado: " + display.innerHTML);
 }
 
-boton_suma.onclick =() =>{
-  console.log("SUMA PULSADO");
-  n1 += resultado_final;
-  display.innerHTML += "+";
-  resultado_final = 0;
-
+//-- Insertar resta
+resta.onclick = () => {
+  display.innerHTML += resta.value;
   //PRUEBAS
-  console.log("resultado final: " + resultado_final);
   console.log("resultado: " + display.innerHTML);
-
-  console.log("Numero1: " + n1);
 }
 
-boton_igual.onclick =() =>{
-  console.log("IGUAL PULSADO");
+//-- Insertar multiplicacion
+mult.onclick = () => {
+  display.innerHTML += mult.value;
+  //PRUEBAS
+  console.log("resultado: " + display.innerHTML);
+}
+
+//-- Insertar division
+divi.onclick = () => {
+  display.innerHTML += divi.value;
+  //PRUEBAS
+  console.log("resultado: " + display.innerHTML);
+}
+
+//-- Evaluar la expresion
+igual.onclick = () => {
   display.innerHTML = eval(display.innerHTML);
-  //PRUEBAS
-  console.log("resultado final: " + resultado_final);
-  console.log("resultado: " + display.innerHTML);
+}
 
+//-- Poner a cero la expresion
+clear.onclick = () => {
+  display.innerHTML = "0";
 }
