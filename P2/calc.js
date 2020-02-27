@@ -12,9 +12,9 @@ const boton_igual = document.getElementById('boton_igual');
 b1.onclick =() =>{
   console.log("BOTON1 PULSADO");
   if (display.innerHTML == 0){
-      display.innerHTML = 1;
+      display.innerHTML = b1.value;
   }else {
-    display.innerHTML += 1;
+    display.innerHTML += b1.value;
   }
   resultado_final = display.innerHTML;
   //PRUEBAS
@@ -25,9 +25,9 @@ b1.onclick =() =>{
 b2.onclick =() =>{
   console.log("BOTON2 PULSADO");
   if (display.innerHTML == 0){
-      display.innerHTML = 2;
+      display.innerHTML = b2.value;
   }else {
-    display.innerHTML += 2;
+    display.innerHTML += b2.value;
   }
   resultado_final = display.innerHTML;
   //PRUEBAS
