@@ -27,12 +27,12 @@ function digito(boton){
 
 
 //// Agrupamos las operaciones que se refieren a (+-*/)
-for (i = 0; i < operador.length; i++) {
+/*for (i = 0; i < operador.length; i++) {
   operador[i].onclick = (ev)=>{
     operando(ev.target);
   }
 }
-
+*/
 /////// funcion comun para todos//////????????????
 /*function operando(boton){
   if (display.innerHTML == "+"){
