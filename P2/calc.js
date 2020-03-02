@@ -75,9 +75,36 @@ divi.onclick = () => {
   console.log("resultado: " + display.innerHTML);
 }
 
+//-- Insertar decimales
+decimales.onclick = () => {
+  display.innerHTML += decimales.value;
+  //PRUEBAS
+  console.log("resultado: " + display.innerHTML);
+}
+
+//-- calcular exponencial
+exp.onclick = () => {
+  display.innerHTML += exp.value;
+  //PRUEBAS
+  console.log("resultado: " + display.innerHTML);
+}
+//-- parentesis
+par_izq.onclick = () => {
+  display.innerHTML += par_izq.value;
+  //PRUEBAS
+  console.log("resultado: " + display.innerHTML);
+}
+
+par_dcho.onclick = () => {
+  display.innerHTML += par_dcho.value;
+  //PRUEBAS
+  console.log("resultado: " + display.innerHTML);
+}
+
 //-- Evaluar la expresion
 igual.onclick = () => {
   display.innerHTML = eval(display.innerHTML);
+  console.log("resultado: " + display.innerHTML);
 }
 
 //-- Poner a cero la expresion
