@@ -91,7 +91,7 @@ exp.onclick = () => {
 //-- parentesis
 par_izq.onclick = () => {
   if (display.innerHTML == 0){
-    display.innerHTML += par_izq.value;
+    display.innerHTML = par_izq.value;
   }else {
     display.innerHTML += par_izq.value;
   }
@@ -101,7 +101,7 @@ par_izq.onclick = () => {
 
 par_dcho.onclick = () => {
   if (display.innerHTML == 0){
-    display.innerHTML += par_dcho.value;
+    display.innerHTML = par_dcho.value;
   }else {
     display.innerHTML += par_dcho.value;
   }
