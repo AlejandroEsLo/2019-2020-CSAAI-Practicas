@@ -90,13 +90,21 @@ exp.onclick = () => {
 }
 //-- parentesis
 par_izq.onclick = () => {
-  display.innerHTML += par_izq.value;
+  if (display.innerHTML == 0){
+    display.innerHTML += par_izq.value;
+  }else {
+    display.innerHTML += par_izq.value;
+  }
   //PRUEBAS
   console.log("resultado: " + display.innerHTML);
 }
 
 par_dcho.onclick = () => {
-  display.innerHTML += par_dcho.value;
+  if (display.innerHTML == 0){
+    display.innerHTML += par_dcho.value;
+  }else {
+    display.innerHTML += par_dcho.value;
+  }
   //PRUEBAS
   console.log("resultado: " + display.innerHTML);
 }
