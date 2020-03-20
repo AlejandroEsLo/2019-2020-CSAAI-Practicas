@@ -175,10 +175,11 @@ window.onkeydown = (e) => {
     case " ":
       //-- Llevar bola a su posicion incicial
       bola.init();
-      //-- Darle velocidad
+      //-- Darle velocidad (Angulos aleatorios en el saque)
       bola.vx = Math.random() * (10 - 1) + 1;
       bola.vy = Math.random() * (10 - 1) + 1;
-      
+      // Si quisieramos saque hacia arriba  * - (10 - 1) + 1;
+
     default:
   }
 }
