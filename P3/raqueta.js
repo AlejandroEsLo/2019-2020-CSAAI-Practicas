@@ -50,4 +50,11 @@ class Raqueta
     //-- Pintar!
     this.ctx.fill();
   }
+  golpear()
+  {//-- Comprobar si hay colisión con la raqueta derecha
+    if (bola.x >= raqD.x && bola.x <=(raqD.x + raqD.width) &&
+        bola.y >= raqD.y && bola.y <=(raqD.y + raqD.height)) {
+          bola.vx = bola.vx * -1;
+    }
+  }
 }

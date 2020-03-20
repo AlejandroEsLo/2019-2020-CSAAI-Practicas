@@ -94,22 +94,29 @@ function animacion()
   if (bola.x >= raqI.x && bola.x <=(raqI.x + raqI.width) &&
       bola.y >= raqI.y && bola.y <=(raqI.y + raqI.height)) {
 
-      bola.vx = bola.vx * -1;
-/*
+
+//*
       //Controlar velocidad bola respecto la raqueta
       if(raqI.v == 0){//Raqueta parada
         bola.vx = bola.vx * -1;
-      }else if (raqI.v > 0){ //Raqueta en movimiento
+      }else { //Raqueta en movimiento
           bola.vx = bola.vx * -1;
-          bola.vy = bola.vy + 2;
+          bola.vy = bola.vy + 1;
+
       }
-*/
+//*/
   }
 
   //-- Comprobar si hay colisión con la raqueta derecha
   if (bola.x >= raqD.x && bola.x <=(raqD.x + raqD.width) &&
       bola.y >= raqD.y && bola.y <=(raqD.y + raqD.height)) {
-    bola.vx = bola.vx * -1;
+        //Controlar velocidad bola respecto la raqueta
+        if(raqD.v == 0){//Raqueta parada
+          bola.vx = bola.vx * -1;
+        }else { //Raqueta en movimiento
+            bola.vx = bola.vx * -1;
+            bola.vy = bola.vy + 1;
+        }
   }
 
 // <<<<< Actualizar posicion bola >>>>>//
