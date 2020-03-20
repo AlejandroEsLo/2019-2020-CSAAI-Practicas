@@ -25,6 +25,13 @@ Teclas ArrowUp(Flecha arriba) y ArrowDown(Flecha abajo): Mover raqueta derecha.
 2)Velocidad y ángulo aleatorios de la bola en el saque:
   Al sacar, tanto el ángulo como la velocidad de la bola serán aleatorios
   (dentro de un rango), haciendo el saque más impredecible.
-  El saque tendra un rango de entre 6 y 1 dentro de la clase bola:
-      this.vx = Math.random() * (6 - 1) + 1;
-      this.vy = Math.random() * (6 - 1) + 1;
+  Dentro de la clase bola en bola.js:
+
+      //-- Velocidad inicial de la bola
+      this.vx_ini = Math.random() * (6 - 1) + 1;
+      this.vy_ini = Math.random() * (6 - 1) + 1;
+
+  En el pong.js si pulsamos el espacio para sacar:
+      //-- Darle velocidad
+      bola.vx = Math.random() * (10 - 1) + 1;
+      bola.vy = Math.random() * (10 - 1) + 1;

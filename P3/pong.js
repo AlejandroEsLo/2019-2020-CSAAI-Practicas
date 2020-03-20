@@ -176,7 +176,9 @@ window.onkeydown = (e) => {
       //-- Llevar bola a su posicion incicial
       bola.init();
       //-- Darle velocidad
-      bola.vx = bola.vx_ini;
+      bola.vx = Math.random() * (10 - 1) + 1;
+      bola.vy = Math.random() * (10 - 1) + 1;
+      
     default:
   }
 }

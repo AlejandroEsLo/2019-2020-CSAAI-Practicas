@@ -14,14 +14,15 @@ class Bola {
     this.x = 0;
     this.y = 0;
 
+    //<<<< Velocidad y ángulo aleatorios de la bola >>>>
+
     //-- Velocidad inicial de la bola
-    this.vx_ini = 4;
-    this.vy_ini = 2;
+    this.vx_ini = Math.random() * (6 - 1) + 1;
+    this.vy_ini = Math.random() * (6 - 1) + 1;
 
     //-- Velocidad genérica de la bola
-    //-- Velocidad y ángulo aleatorios de la bola
-    this.vx = Math.random() * (6 - 1) + 1;
-    this.vy = Math.random() * (6 - 1) + 1;
+    this.vx = 0;
+    this.vy = 0;
 
     //-- Inicializar
     this.init();
