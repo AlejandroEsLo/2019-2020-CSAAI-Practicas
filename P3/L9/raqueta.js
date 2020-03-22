@@ -50,5 +50,4 @@ class Raqueta
     //-- Pintar!
     this.ctx.fill();
   }
-  
 }
