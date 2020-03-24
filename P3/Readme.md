@@ -19,8 +19,7 @@ Teclas ArrowUp(Flecha arriba) y ArrowDown(Flecha abajo): Mover raqueta derecha.
    -Con la raqueta parada, la bola saldra en la direccion contraria sin variar su
    velocidad en y.
 
-   -Con la raqueta en movimiento , la bola saldra en direccion contraria aumentando
-   la velocidad de y en 1 unidad.
+   -Con la raqueta en movimiento , la bola saldra en direccion contraria. Si la raqueta se mueve hacia arriba, le transmite velocidad hacia arriba, y si se mueve hacia abajo, le transmite velocidad hacia abajo
 
 2)Velocidad y ángulo aleatorios de la bola en el saque:
   Al sacar, tanto el ángulo como la velocidad de la bola serán aleatorios
@@ -28,8 +27,8 @@ Teclas ArrowUp(Flecha arriba) y ArrowDown(Flecha abajo): Mover raqueta derecha.
   Dentro de la clase bola en bola.js:
 
       //-- Velocidad inicial de la bola
-      this.vx_ini = Math.random() * (6 - 1) + 1;
-      this.vy_ini = Math.random() * (6 - 1) + 1;
+      this.vx_ini = Math.random() * (3 - 1) + 1;
+      this.vy_ini = Math.random() * (3 - 1) + 1;
 
   En el pong.js si pulsamos el espacio para sacar:
       //-- Darle velocidad

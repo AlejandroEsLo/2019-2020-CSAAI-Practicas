@@ -101,7 +101,7 @@ function animacion()
         bola.vx = bola.vx * -1;
       }else { //Raqueta en movimiento
           bola.vx = bola.vx * -1;
-          bola.vy = bola.vy + 1;
+          bola.vy = raqI.v
 
       }
 //*/
@@ -115,7 +115,7 @@ function animacion()
           bola.vx = bola.vx * -1;
         }else { //Raqueta en movimiento
             bola.vx = bola.vx * -1;
-            bola.vy = bola.vy + 1;
+            bola.vy = raqD.v
         }
   }
 
@@ -176,8 +176,8 @@ window.onkeydown = (e) => {
       //-- Llevar bola a su posicion incicial
       bola.init();
       //-- Darle velocidad (Angulos aleatorios en el saque)
-      bola.vx = Math.random() * (10 - 1) + 1;
-      bola.vy = Math.random() * (10 - 1) + 1;
+      bola.vx = Math.random() * (5 - 1) + 1;
+      bola.vy = Math.random() * (5 - 1) + 1;
       // Si quisieramos saque hacia arriba  * - (10 - 1) + 1;
 
     default:

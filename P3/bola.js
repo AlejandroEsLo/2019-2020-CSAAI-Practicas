@@ -17,8 +17,8 @@ class Bola {
     //<<<< Velocidad y ángulo aleatorios de la bola >>>>
 
     //-- Velocidad inicial de la bola
-    this.vx_ini = Math.random() * (6 - 1) + 1;
-    this.vy_ini = Math.random() * (6 - 1) + 1;
+    this.vx_ini = Math.random() * (3 - 1) + 1;
+    this.vy_ini = Math.random() * (3 - 1) + 1;
 
     //-- Velocidad genérica de la bola
     this.vx = 0;
@@ -31,10 +31,10 @@ class Bola {
   draw() {
     //----- Dibujar la Bola
     this.ctx.beginPath();
-    this.ctx.fillStyle='white';
+    this.ctx.fillStyle='red';
 
-    //-- x,y, anchura, altura
-    this.ctx.rect(this.x, this.y, this.size, this.size);
+    //-- x, y, radio, startAngle, endAngle, antihorario
+    this.ctx.arc(this.x, this.y, this.size, 0, Math.PI*2, false);
     this.ctx.fill();
   }
 
