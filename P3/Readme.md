@@ -32,7 +32,7 @@ Teclas ArrowUp(Flecha arriba) y ArrowDown(Flecha abajo): Mover raqueta derecha.
 
 ====FUNCIONALIDADES EXTRA====
 
-1)Controlar velocidad bola respecto la raqueta
+1)Controlar velocidad bola respecto la raqueta(Cambio del ángulo de rebote)
    -Con la raqueta parada, la bola saldra en la direccion contraria sin variar su
    velocidad en y.
 
@@ -44,10 +44,10 @@ Teclas ArrowUp(Flecha arriba) y ArrowDown(Flecha abajo): Mover raqueta derecha.
   Dentro de la clase bola en bola.js:
 
       //-- Velocidad inicial de la bola
-      this.vx_ini = Math.random() * (3 - 1) + 1;
+      this.vx_ini = Math.random() * (6 - 1) + 1;
       this.vy_ini = Math.random() * (3 - 1) + 1;
 
-  En el pong.js si pulsamos el espacio para sacar:
+  En el pong.js si pulsamos S para sacar:
       //-- Darle velocidad
-      bola.vx = Math.random() * (10 - 1) + 1;
-      bola.vy = Math.random() * (10 - 1) + 1;
+      bola.vx = Math.random() * (5 - 1) + 1;
+      bola.vy = Math.random() * (5 - 1) + 1;
