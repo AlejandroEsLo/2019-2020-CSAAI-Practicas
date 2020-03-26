@@ -17,7 +17,7 @@ class Bola {
     //<<<< Velocidad y ángulo aleatorios de la bola >>>>
 
     //-- Velocidad inicial de la bola
-    this.vx_ini = Math.random() * (3 - 1) + 1;
+    this.vx_ini = Math.random() * (6 - 1) + 1;
     this.vy_ini = Math.random() * (3 - 1) + 1;
 
     //-- Velocidad genérica de la bola
@@ -42,6 +42,8 @@ class Bola {
     //-- Inicializa la bola: A su posicion inicial
     this.x = this.x_ini;
     this.y = this.y_ini;
+    this.vx = 0;
+    this.vy = 0;
   }
 
   update() {

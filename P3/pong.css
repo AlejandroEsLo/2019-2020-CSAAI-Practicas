@@ -7,3 +7,8 @@ body {
 #canvas {
   background-color: black;
 }
+
+div.canvas {
+  float: left;
+  margin-right: 15px;
+}
