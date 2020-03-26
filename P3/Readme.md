@@ -13,6 +13,23 @@ Pulsar ESPACIO para sacar.
 Teclas W y S: Mover raqueta izquierda.
 Teclas ArrowUp(Flecha arriba) y ArrowDown(Flecha abajo): Mover raqueta derecha.
 
+--ESTADOS--
+
+    INIT: Estado inicial. En este estado aparece en la pantlla el mensaje "Pulsa Start".
+    Al apretar el botón de start, el juego comenzará. Mientras el juego esté en este estado inicial,
+    las raquetas NO se pueden mover con las teclas. Ni tampoco se debe visualizar la bola.
+
+    SAQUE: Estado de saque. El juego ha comenzado, pero se está esperando a que el jugador saque.
+    Para ello deberá apretar la tecla S. Las raquetas sí se pueden mover con las teclas,
+    pero no hay bola todavía. En cuanto se aprieta el botón S,
+    se pasa al siguiente estado: JUGANDO.
+
+    JUGANDO: Hay un tanto en curso. La bola está en movimiento. Las raquetas se pueden
+    mover con las teclas, pero la tecla S no debe funcionar. Si se aprieta se ignora.
+    Cuando finaliza el tanto se vuelve al estado de SAQUE.
+
+
+
 ====FUNCIONALIDADES EXTRA====
 
 1)Controlar velocidad bola respecto la raqueta

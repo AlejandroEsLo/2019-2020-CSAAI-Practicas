@@ -62,6 +62,7 @@ function draw() {
   ctx.lineTo(canvas.width/2, canvas.height);
   ctx.stroke();
 
+
   //------ Dibujar el tanteo
   ctx.font = "100px Arial";
   ctx.fillStyle = "white";
@@ -89,11 +90,20 @@ function draw() {
 function animacion()
 {
 
-// <<<<< Actualizar las posiciones de los objetos móviles >>>>>//
+  // <<<<< Actualizar las posiciones de los objetos móviles >>>>>//
+  if (estado != ESTADO.INIT) {
+    //-- Actualizar las raquetas con la velocidad actual
+    raqI.update();
+    raqD.update();
+  }
 
-  //-- Actualizar las raquetas con la velocidad actual
-  raqI.update();
-  raqD.update();
+  if (estado == ESTADO.INIT) {
+    //-- Variables marcadores
+    marcadorJ1 = 0;
+    marcadorJ2 = 0;
+    raqI.init();
+    raqD.init();
+  }
 
 // <<<<< Comprobar colisiones canvas >>>>>//
 
@@ -118,7 +128,7 @@ function animacion()
     bola.init();
     console.log("Tanto J2!!!!");
     marcadorJ2++;
-    
+
     //-- Reproducir sonido
     sonido_rebote.currentTime = 0;
     sonido_rebote.play();
@@ -185,6 +195,7 @@ function animacion()
 
   //-- Dibujar el nuevo frame
   draw();
+
 }
 
 // <<<<< Objeto: Bola >>>>>//
@@ -281,3 +292,5 @@ stop.onclick = () => {
   bola.init();
   start.disabled = false;
 }
+
+console.log(estado);
