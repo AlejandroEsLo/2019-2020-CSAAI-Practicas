@@ -14,16 +14,43 @@ const ctx = canvas.getContext("2d");
 const sonido_raqueta = new Audio("pong-raqueta.mp3");
 const sonido_rebote = new Audio("pong-rebote.mp3");
 const sonido_tanto = new Audio("pong-tanto.mp3");
+const sonido_pared = new Audio("fight.mp3");
+const sonido_saque = new Audio("boom.mp3");
 
 //-- Variables marcadores
 let marcadorJ1 = 0;
 let marcadorJ2 = 0;
+let ganador = "nadie";
+
+//-- Niveles de dificultad de jugador ordenador
+let level_dificulty = 0;
+//-- FACIL
+const easy = document.getElementById("easy")
+  easy.onclick = () => {
+    level_dificulty = 0.75;
+  }
+//-- MEDIO
+const medium = document.getElementById("medium");
+  medium.onclick = () => {
+    level_dificulty = 0.85;
+  }
+//-- DIFICIL
+const hard = document.getElementById("hard");
+  hard.onclick = () => {
+    level_dificulty = 0.95;
+  }
+//-- Imposible
+const impossible = document.getElementById("impossible");
+  impossible.onclick = () => {
+    level_dificulty = 1;
+  }
 
 //-- Estados del juego
 const ESTADO = {
   INIT: 0,
   SAQUE: 1,
   JUGANDO: 2,
+  FIN: 3,
 }
 
 //-- Variable de estado
@@ -83,9 +110,13 @@ function draw() {
     ctx.fillText("Pulsa Start!", 30, 350);
   }
 
-
+  //--Si gana alguien fin del juego
+  if (estado == ESTADO.FIN) {
+    ctx.font = "40px Arial";
+    ctx.fillStyle = "red";
+    ctx.fillText(ganador + " WINNER!!", 30, 350);
+  }
 }
-
 //---- Bucle principal de la animación
 function animacion()
 {
@@ -94,6 +125,8 @@ function animacion()
   if (estado != ESTADO.INIT) {
     //-- Actualizar las raquetas con la velocidad actual
     raqI.update();
+    //-- Hacemos que la raqueta izquierda la controle el ordenador
+    raqI.y = bola.y * level_dificulty;
     raqD.update();
   }
 
@@ -115,9 +148,15 @@ function animacion()
     console.log("Tanto J1!!!!");
     marcadorJ1++;
 
+    //-- Si el ordenador llega a 5, gana la partida
+    if (marcadorJ1 == 5.0) {
+      ganador = "computer";
+      estado = ESTADO.FIN;
+    }
+
     //-- Reproducir sonido
-    sonido_rebote.currentTime = 0;
-    sonido_rebote.play();
+    sonido_tanto.currentTime = 0;
+    sonido_tanto.play();
     return;
   }
 
@@ -129,9 +168,15 @@ function animacion()
     console.log("Tanto J2!!!!");
     marcadorJ2++;
 
+    //-- Si el J2 llega a 5, gana la partida
+    if (marcadorJ2 == 5.0) {
+      ganador = "jugador";
+      estado = ESTADO.FIN;
+    }
+
     //-- Reproducir sonido
-    sonido_rebote.currentTime = 0;
-    sonido_rebote.play();
+    sonido_tanto.currentTime = 0;
+    sonido_tanto.play();
     return;
   }
 
@@ -142,11 +187,19 @@ function animacion()
   if (bola.y >= canvas.height) {
     //-- Hay colisión. Cambiar el signo de la bola
     bola.vy = bola.vy * -1;
+    //-- Reproducir sonido
+    sonido_pared.currentTime = 0;
+    sonido_pared.play();
+
   }
   //--Inferior
   if (bola.y <= 0) {
     //-- Hay colisión. Cambiar el signo de la bola
     bola.vy = bola.vy * -1;
+    //-- Reproducir sonido
+    sonido_pared.currentTime = 0;
+    sonido_pared.play();
+
   }
 
 
@@ -242,7 +295,7 @@ window.onkeydown = (e) => {
     if (estado == ESTADO.SAQUE) {
       //-- Reproducir sonido
       sonido_raqueta.currentTime = 0;
-      sonido_raqueta.play();
+      sonido_saque.play();
 
       //-- Llevar bola a su posicion incicial
       bola.init();
@@ -281,6 +334,9 @@ start.onclick = () => {
   estado = ESTADO.SAQUE;
   console.log("SAQUE!");
   canvas.focus();
+  //Ver el nivel de dificultad que tenemos
+  console.log(level_dificulty);
+
 }
 
 //-- Boton de stop
@@ -292,5 +348,6 @@ stop.onclick = () => {
   bola.init();
   start.disabled = false;
 }
+
 
 console.log(estado);

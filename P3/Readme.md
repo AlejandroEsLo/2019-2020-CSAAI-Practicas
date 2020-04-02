@@ -9,8 +9,9 @@ Clase raqueta => raqueta.js
 Clase bola => bola.js
 
 ====FUNCIONAMIENTO====
-Pulsar ESPACIO para sacar.
-Teclas W y S: Mover raqueta izquierda.
+Seleccionar dificultad
+Pulsar S para sacar.
+Computer: Mover raqueta izquierda.
 Teclas ArrowUp(Flecha arriba) y ArrowDown(Flecha abajo): Mover raqueta derecha.
 
 --ESTADOS--
@@ -51,3 +52,20 @@ Teclas ArrowUp(Flecha arriba) y ArrowDown(Flecha abajo): Mover raqueta derecha.
       //-- Darle velocidad
       bola.vx = Math.random() * (5 - 1) + 1;
       bola.vy = Math.random() * (5 - 1) + 1;
+
+3)Introducción de sonidos:
+  -Sonido cuando choca en raquetas.
+  -Sonido al sacar.
+  -Sonido al golpear las paredes.
+  -Sonido al conseguir un tanto.
+
+4)Implementa la lógica necesaria para que una de la raquetas del jugador(raqueta izq)
+la controle el ordenador. De manera que se pueda jugar contra la máquina.
+  -Botones para elegir la dificultad de nuestro oponente controlado por el ordenador:
+      -EASY
+      -MEDIUM
+      -HARD
+      -IMPOSSIBLE
+
+5)Gana el jugador que llegue antes a 5 y se acabara el juego.
+Para ponerlo de nuevo en marcha, darle a stop y a continuacion elegir dificultad y START.
