@@ -33,8 +33,18 @@ class Raqueta
 
   //-- Actualizar la posición de la raqueta
   update()
-  {
-    this.y += this.v;
+  { // -- Limitamos el movimiento de la pala para que no salga por la pared de arriba
+    if (this.y >= 3) {
+      this.y += this.v;
+    }else {
+      this.y = 0;
+    }
+    // -- Limitamos el movimiento de la pala para que no salga por la pared de abajo
+    if (this.y <= 360) {
+      this.y += this.v;
+    }else {
+      this.y = 360;
+    }
   }
 
   //-- Dibujar la raqueta

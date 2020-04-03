@@ -246,6 +246,7 @@ function animacion()
   //-- Borrar la pantalla
   ctx.clearRect(0,0, canvas.width, canvas.height);
 
+console.log(raqD.y);
   //-- Dibujar el nuevo frame
   draw();
 
@@ -276,12 +277,12 @@ window.onkeydown = (e) => {
 
   switch (e.key) {
     //Raqueta izquierda
-    case "a"://Hacia abajo izq
-      raqI.v = raqI.v_ini;
-      break;
-    case "q"://Hacia arriba izq
-      raqI.v = raqI.v_ini * -1;
-      break;
+    //case "a"://Hacia abajo izq
+    //  raqI.v = raqI.v_ini;
+    //  break;
+    //case "q"://Hacia arriba izq
+    //  raqI.v = raqI.v_ini * -1;
+    //  break;
     //Raqueta derecha
     case "ArrowDown"://Hacia abajo dcha
       raqD.v = raqD.v_ini;
@@ -317,10 +318,10 @@ window.onkeydown = (e) => {
 
 //-- Retrollamada de la liberacion de teclas
 window.onkeyup = (e) => {
-  if (e.key == "q" || e.key == "a"){
+  //if (e.key == "q" || e.key == "a"){
     //-- Quitar velocidad de la raqueta
-    raqI.v = 0;
-  }
+  //  raqI.v = 0;
+  //}
   if (e.key == "ArrowDown" || e.key == "ArrowUp"){
     //-- Quitar velocidad de la raqueta
     raqD.v = 0;
