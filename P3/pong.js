@@ -246,7 +246,6 @@ function animacion()
   //-- Borrar la pantalla
   ctx.clearRect(0,0, canvas.width, canvas.height);
 
-console.log(raqD.y);
   //-- Dibujar el nuevo frame
   draw();
 
