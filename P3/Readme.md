@@ -14,6 +14,8 @@ Pulsar S para sacar.
 Computer: Mover raqueta izquierda.
 Teclas ArrowUp(Flecha arriba) y ArrowDown(Flecha abajo): Mover raqueta derecha.
 
+Ganara el primero en llegar a 5 y se mostrara en pantalla.
+
 --ESTADOS--
 
     INIT: Estado inicial. En este estado aparece en la pantlla el mensaje "Pulsa Start".
