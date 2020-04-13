@@ -69,3 +69,6 @@ la controle el ordenador. De manera que se pueda jugar contra la máquina.
 
 5)Gana el jugador que llegue antes a 5 y se acabara el juego.
 Para ponerlo de nuevo en marcha, darle a stop y a continuacion elegir dificultad y START.
+
+
+Visualización: https://alejandroeslo.github.io/2019-2020-CSAAI-Practicas/P3/pong.html
