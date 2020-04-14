@@ -15,6 +15,12 @@ const video3 = document.getElementById("video3")
 video3.width=200;  //-- Tamaño de la pantalla de video
 video3.height=100;
 
+//----- Obtener elemento de video3 y configurarlo
+const imagen_prueba = document.getElementById("imagen_prueba")
+imagen_prueba.width=200;  //-- Tamaño de la pantalla de video
+imagen_prueba.height=100;
+
+
 //----- Obtener elemento de video emision y configurarlo
 const video_emision = document.getElementById("video_emision")
 video_emision.width=600;  //-- Tamaño de la pantalla de video
@@ -26,6 +32,7 @@ video_emision.height=300;
 video1.poster="https://github.com/myTeachingURJC/2019-2020-CSAAI/raw/master/L10/test.png";
 video2.poster="https://github.com/myTeachingURJC/2019-2020-CSAAI/raw/master/L10/test.png";
 video3.poster="https://github.com/myTeachingURJC/2019-2020-CSAAI/raw/master/L10/test.png";
+imagen_prueba.poster="https://github.com/myTeachingURJC/2019-2020-CSAAI/raw/master/L10/test.png";
 video_emision.poster="https://github.com/myTeachingURJC/2019-2020-CSAAI/raw/master/L10/test.png";
 
 //-- Obtener los botones
@@ -45,13 +52,18 @@ inicio.onclick = () => {
 
   video3.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4"
   video3.play();
+
+  imagen_prueba.src = "/images/fondo.jpg"
+  imagen_prueba.play();
+
 };
 
 
 //-- Función de retrollamada del botón de ver
 play_v1.onclick = () => {
   console.log("Click V1");
-  video_emision.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4"
+  // VER COMO METER AQUI EL VIDEO QUE ESTA REPRODUCIENDOSE DIRECTAMENTE
+  video_emision.src = "https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4"
   video_emision.play();
 };
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>REALIZADOR DE TV</title>
-    <script src="video-01.js" defer></script>
+    <script src="video.js" defer></script>
     <link rel="stylesheet" href="video.css">
   </head>
   <body>
@@ -24,16 +24,21 @@
         <th>Fuente 1</th>
         <th>Fuente 2</th>
         <th>Fuente 3</th>
+        <th>Emisión en Pruebas</th>
+
       </tr>
       <tr>
-        <td> <video loop id="video1"></video> </td>
-        <td> <video loop id="video2"></video> </td>
-        <td> <video loop id="video3"></video> </td>
+        <td> <video loop id="video1" controls muted></video> </td>
+        <td> <video loop id="video2" controls muted></video> </td>
+        <td> <video loop id="video3" controls muted></video> </td>
+        <td> <video loop id="imagen_prueba"></video> </td>
+
       </tr>
       <tr>
         <td> <button id="play_v1" >SEL</button> </td>
         <td> <button id="play_v2" >SEL</button> </td>
         <td> <button id="play_v3" >SEL</button> </td>
+        <td> <button id="play_imagen" >SEL</button> </td>
       </tr>
 
     </table>
