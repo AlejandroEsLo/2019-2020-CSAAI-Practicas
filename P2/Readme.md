@@ -1,4 +1,5 @@
-# Práctica 2: CALCULADORA
+# CALCULADORA
+# Alejandro Esteban Lopez
 
 ====ARCHIVOS====
 1)Pagina principal index.html

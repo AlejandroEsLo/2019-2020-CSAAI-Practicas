@@ -1,4 +1,5 @@
-# Práctica 1: CV
+# CV
+# Alejandro Esteban Lopez
 
 ====ARCHIVOS====
 1)Pagina principal index.html (Funciona correctamente en cualquier navegador)
