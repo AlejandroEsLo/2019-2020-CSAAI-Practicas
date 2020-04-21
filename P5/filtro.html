@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Filtros</title>
+    <link rel="stylesheet" href="filtro.css">
+    <script src="filtro.js" defer></script>
+  </head>
+  <body>
+
+    <table style="width:100%">
+      <tr>
+        <th>Imagen Original</th>
+        <th>Imagen Modificada</th>
+      </tr>
+
+      <tr>
+        <td> <img src="image.jpg" id="imagesrc"> </td>
+        <td> <canvas id="canvas" ></canvas> </td>
+      </tr>
+    </table>
+
+    <p>R</p>
+    <input type="range" id="R" min="0" max="255" value="255"/>
+    <p id="range_value_R">00</p>
+
+    <p>G</p>
+    <input type="range" id="G" min="0" max="255" value="255"/>
+    <p id="range_value_G">00</p>
+
+    <p>B</p>
+    <input type="range" id="B" min="0" max="255" value="255"/>
+    <p id="range_value_B">00</p>
+  </body>
+</html>
