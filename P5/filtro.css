@@ -8,7 +8,7 @@ table {
 }
 
 th {
-  font-size: 30px;
+  font-size: 20px;
   color: red;
   text-align: center;
 }
@@ -20,8 +20,4 @@ td{
 body{
   text-align: center;
   background-color: black;
-}
-
-p{
-  color: red;
 }

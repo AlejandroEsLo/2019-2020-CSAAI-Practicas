@@ -42,40 +42,64 @@ const play_v3 = document.getElementById("play_v3")
 //const stop = document.getElementById("stop")
 const inicio = document.getElementById("iniciar_videos")
 
+const videos = ["https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4",
+"https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente2.mp4",
+"https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4"];
+
 inicio.onclick = () => {
   console.log("Iniciamos videos");
-  video1.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4"
+  video1.src = videos[0];
   video1.play();
 
-  video2.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente2.mp4"
+  video2.src = videos[1];
   video2.play();
 
-  video3.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4"
+  video3.src = videos[2];
   video3.play();
 
-  imagen_prueba.src = "/images/fondo.jpg"
-  imagen_prueba.play();
+//  imagen_prueba.src = "/images/fondo.jpg"
+//  imagen_prueba.play();
 
 };
 
+/*
+function formatTime(time) {
+  var
+    minutes = Math.floor(time / 60) % 60,
+    seconds = Math.floor(time % 60);
 
+  return   (minutes < 10 ? '0' + minutes : minutes) + ':' +
+           (seconds < 10 ? '0' + seconds : seconds);
+}
+
+
+  current = document.getElementById("video1-current"),
+
+// Update the current time
+video1.addEventListener("timeupdate", function() {
+  current.innerHTML = formatTime(video1.currentTime);
+}, false);
+
+*/
 //-- Función de retrollamada del botón de ver
 play_v1.onclick = () => {
   console.log("Click V1");
-  // VER COMO METER AQUI EL VIDEO QUE ESTA REPRODUCIENDOSE DIRECTAMENTE
-  video_emision.src = "https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4"
+  video_emision.currentTime = video1.currentTime;
+  video_emision.src = video1.src;
   video_emision.play();
 };
 
 play_v2.onclick = () => {
   console.log("Click V2");
-  video_emision.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente2.mp4"
+  video_emision.currentTime = video2.currentTime;
+  video_emision.src = video2.src;
   video_emision.play();
 };
 
 play_v3.onclick = () => {
   console.log("Click V3");
-  video_emision.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4"
+  video_emision.currentTime = video3.currentTime;
+  video_emision.src = video3.src;
   video_emision.play();
 };
 
