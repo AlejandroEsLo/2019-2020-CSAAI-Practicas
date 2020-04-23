@@ -88,7 +88,7 @@ const colores = document.getElementById("colores")
     console.log("COLORES!");
   }
 
-//-- Funcion comun para todos los deslizadores
+//-- Funcion para Grises
 function GRISES(){
   //-- Situar la imagen original en el canvas
   //-- No se han hecho manipulaciones todavia
@@ -123,6 +123,37 @@ const grises = document.getElementById("grises")
   grises.onclick = () => {
     GRISES();
     console.log("GRISES!");
+  }
+
+//-- Funcion para rotar
+function ROTACION(){
+  //-- Situar la imagen original en el canvas
+  //-- No se han hecho manipulaciones todavia
+  ctx.drawImage(img, 0,0);
+
+  //-- Obtener la imagen del canvas en pixeles
+  let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+  //-- Obtener el array con todos los píxeles
+  let data = imgData.data
+
+  //-- Filtrar la imagen
+  for (let i = 0; i < data.length; i+=4) {
+    ctx.rotate(Math.PI);
+  }
+  ctx.putImageData(imgData, 0, 0);
+}
+
+const rotacion = document.getElementById("rotacion")
+  rotacion.onclick = () => {
+    ROTACION();
+    console.log("ROTACION!");
+  }
+
+const resetear = document.getElementById("resetear")
+  resetear.onclick = () => {
+    img.onload();
+    console.log("RESETEAR!");
   }
 
 console.log("Fin...");
