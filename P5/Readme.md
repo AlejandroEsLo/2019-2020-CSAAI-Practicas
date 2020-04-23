@@ -29,3 +29,5 @@ o pinchar sobre el boton de GRISES para ver nuestra imagen filtrada en grises.
   Boton que nos sirve para realizar un reseteo del canvas tras la aplicacion de cualquiera
   o cualquieras modificaciones que se hayan realizado con los filtros que hayamos aplicado.
   Nos devuelve la imagen filtrada al estado inicial.
+
+  Visualización: https://alejandroeslo.github.io/2019-2020-CSAAI-Practicas/P5/filtro.html

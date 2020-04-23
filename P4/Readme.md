@@ -10,3 +10,5 @@ Estilo css => video.css
 Iniciamos la visualizacion de los 3 videos pulsando el boton INICIO.
 A continuacion pinchamos en el boton SEL del video que queramos emitir en
 el reproductor grande de arriba.
+
+Visualización: https://alejandroeslo.github.io/2019-2020-CSAAI-Practicas/P4/video.html
